@@ -4,111 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Heindi</title>
-  <link rel="icon" href="https://i.imgur.com/y4rYyFu.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin:0; padding:0; }
-    body, html {
-      height: 100%;
-      font-family: 'Press Start 2P', cursive;
-      color: #333;
-      background: linear-gradient(-45deg, #ffb6c1, #ffffff, #ffc0cb, #fff);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      overflow-x: hidden;
-      opacity: 0;
-      transition: opacity 2s ease;
+    body, html { height:100%; font-family:'Press Start 2P', cursive; color:#333; overflow:hidden; }
+    body {
+      display:flex; align-items:center; justify-content:center;
+      background:linear-gradient(-45deg, #ffb6c1, #ffffff, #ffc0cb, #fff);
+      background-size:400% 400%;
+      animation:gradient 15s ease infinite;
+      opacity:0; transition:opacity 2s ease;
     }
-    body.loaded { opacity: 1; }
-
-    header {
-      width: 100%;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 16px;
-      animation: float 3s ease-in-out infinite;
-    }
-
+    body.loaded { opacity:1; }
+    .container { text-align:center; padding:20px; max-width:90%; }
+    .main-text { font-size:14px; line-height:1.6; margin-bottom:30px; }
+    .english-text { font-size:12px; line-height:2; color:#444; white-space:pre-line; margin-bottom:30px; }
+    .icons { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+    .icons a { text-decoration:none; transition:transform 0.3s ease; }
+    .icons a:hover { transform:scale(1.1); }
+    .icons img { width:40px; height:40px; }
     @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% { background-position:0% 50%; }
+      50% { background-position:100% 50%; }
+      100% { background-position:0% 50%; }
     }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    .container {
-      text-align: center;
-      padding: 20px;
-      max-width: 90%;
-      animation: fadeInUp 2s ease;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .main-text {
-      font-size: 14px;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-
-    .english-text {
-      font-size: 12px;
-      line-height: 2;
-      color: #444;
-      white-space: pre-line;
-      margin-bottom: 30px;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      animation: fadeIn 3s ease;
-    }
-
-    .icons a {
-      text-decoration: none;
-      transition: transform 0.3s ease;
-    }
-
-    .icons a:hover {
-      transform: scale(1.2) rotate(5deg);
-    }
-
-    .icons img {
-      width: 40px;
-      height: 40px;
-    }
-
-    @media (max-width: 600px) {
-      .main-text, .english-text { font-size: 10px; }
-      .icons img { width: 32px; height: 32px; }
+    @media(max-width:600px) {
+      .main-text, .english-text { font-size:10px; }
+      .icons img { width:32px; height:32px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Heindi</h1>
-  </header>
-
   <div class="container">
     <div class="main-text">
       Привет! Я Heindi. Мне 13 лет, я из Казахстана, люблю играть в Minecraft,<br>
