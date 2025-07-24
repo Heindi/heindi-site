@@ -3,38 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heindi</title>
+  <title>celka.su</title>
+  <link rel="icon" href="https://i.imgur.com/y4rYyFu.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin:0; padding:0; }
-    body, html { height:100%; font-family:'Press Start 2P', cursive; color:#333; overflow:hidden; }
-    body {
-      display:flex; align-items:center; justify-content:center;
-      background:linear-gradient(-45deg, #ffb6c1, #ffffff, #ffc0cb, #fff);
-      background-size:400% 400%;
-      animation:gradient 15s ease infinite;
-      opacity:0; transition:opacity 2s ease;
+    body, html {
+      height: 100%;
+      font-family: 'Press Start 2P', cursive;
+      color: #333;
+      background: linear-gradient(-45deg, #ffb6c1, #ffffff, #ffc0cb, #fff);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      overflow-x: hidden;
+      opacity: 0;
+      transition: opacity 2s ease;
     }
-    body.loaded { opacity:1; }
-    .container { text-align:center; padding:20px; max-width:90%; }
-    .main-text { font-size:14px; line-height:1.6; margin-bottom:30px; }
-    .english-text { font-size:12px; line-height:2; color:#444; white-space:pre-line; margin-bottom:30px; }
-    .icons { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-    .icons a { text-decoration:none; transition:transform 0.3s ease; }
-    .icons a:hover { transform:scale(1.1); }
-    .icons img { width:40px; height:40px; }
+    body.loaded { opacity: 1; }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 64px;
+      height: auto;
+      animation: float 3s ease-in-out infinite;
+    }
+
     @keyframes gradient {
-      0% { background-position:0% 50%; }
-      50% { background-position:100% 50%; }
-      100% { background-position:0% 50%; }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
-    @media(max-width:600px) {
-      .main-text, .english-text { font-size:10px; }
-      .icons img { width:32px; height:32px; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      max-width: 90%;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .main-text {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .english-text {
+      font-size: 12px;
+      line-height: 2;
+      color: #444;
+      white-space: pre-line;
+      margin-bottom: 30px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      animation: fadeIn 3s ease;
+    }
+
+    .icons a {
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .icons a:hover {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .main-text, .english-text { font-size: 10px; }
+      .icons img { width: 32px; height: 32px; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="https://i.imgur.com/y4rYyFu.png" alt="celka.su logo">
+  </header>
+
   <div class="container">
     <div class="main-text">
       Привет! Я Heindi. Мне 13 лет, я из Казахстана, люблю играть в Minecraft,<br>
@@ -47,13 +122,13 @@
       I enjoy playing Minecraft, especially on anarchy servers.
     </div>
     <div class="icons">
-      <a href="https://t.me/your_username" target="_blank">
+      <a href="https://t.me/+1fzG2qsmM2RjZTEy" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" />
       </a>
-      <a href="https://youtube.com/@your_channel" target="_blank">
+      <a href="https://www.youtube.com/@heindi" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />
       </a>
-      <a href="https://tiktok.com/@your_username" target="_blank">
+      <a href="https://www.tiktok.com/@heindiffoq" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" />
       </a>
     </div>
